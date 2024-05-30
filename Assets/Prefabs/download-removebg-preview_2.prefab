@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2679731948366175624}
   m_Layer: 0
   m_Name: download-removebg-preview_2
-  m_TagString: Asteroid
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -161,5 +161,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1c47bfbf039cf74a888a1ec979a350c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smallAsteroid: {fileID: 5065019521533748507, guid: bcde26839ef8ade40a93d310fb81a63a, type: 3}
   speed: 2

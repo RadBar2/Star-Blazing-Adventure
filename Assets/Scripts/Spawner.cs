@@ -9,7 +9,7 @@ public class Spawner : MonoBehaviour
 
     public List<GameObject> obstacles;
 
-    public float spawnRate = 1;
+    public float spawnRate = 5;
 
     public GameObject Portal;
     private void Start()
@@ -25,6 +25,7 @@ public class Spawner : MonoBehaviour
         var prefab = obstacles[index];
 
         position = transform.position;
+        position.x -= 3;
         position.y = Random.Range(-5, 5);
         if (Portal.activeSelf) position.x = 7;
 

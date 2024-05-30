@@ -17,6 +17,6 @@ public class Counter : MonoBehaviour
 
     public void Update()
     {
-        if (score >= 100) Portal.SetActive(true);
+        if (score >= 10) Portal.SetActive(true);
     }
 }

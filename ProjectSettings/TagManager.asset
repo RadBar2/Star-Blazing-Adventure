@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Asteroid
   - Projectile
+  - Counter
+  - Teleport
+  - Enemy
+  - Boss
+  - Missile
   layers:
   - Default
   - TransparentFX

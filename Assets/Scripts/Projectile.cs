@@ -8,6 +8,7 @@ public class Projectile : MonoBehaviour
     public Counter counter;
     public float speed = 20000;
     public float lifetime = 1;
+    public int damage = 5;
 
 
     void Start()
@@ -25,7 +26,35 @@ public class Projectile : MonoBehaviour
         if (collision.gameObject.CompareTag("Asteroid"))
         {
             Destroy(collision.gameObject);
-            counter.scoreText.text = $"Asteroids Destroyed: {++counter.score}/100";
+            if(counter != null) counter.scoreText.text = $"Asteroids Destroyed: {++counter.score}/10";
+            Destroy(this.gameObject);
+        }
+
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(collision.gameObject);
+            Destroy(this.gameObject);
+        }
+
+        if (collision.gameObject.CompareTag("Missile"))
+        {
+            Destroy(collision.gameObject);
+            Destroy(this.gameObject);
+        }
+
+        if(collision.gameObject.CompareTag("Boss"))
+        {
+            var health = collision.gameObject.GetComponent<Health>();
+
+            if (health != null)
+            {
+                health.TakeDamage(damage);
+
+                if (health.hp <= health.maxHealt) 
+                { 
+                    damage += (health.maxHealt - health.hp) / 10;
+                }
+            }
             Destroy(this.gameObject);
         }
     }

@@ -8,14 +8,19 @@ public class Play : MonoBehaviour
 {
     public Button btn;
 
+    AudioSource audio;
+
     void Start()
     {
+        audio = GetComponent<AudioSource>();
+
         btn = GetComponent<Button>();
         btn.onClick.AddListener(TaskOnClick);
     }
 
     void TaskOnClick()
     {
+        audio.PlayOneShot(audio.clip);
         SceneManager.LoadScene("SampleScene");
     }
 }

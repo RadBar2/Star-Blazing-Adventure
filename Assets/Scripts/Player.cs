@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
 
-    public float speed = 1000;
+    public float speed = 10;
 
     public GameObject bulletPrefab;
     public float projectiles = 3;
